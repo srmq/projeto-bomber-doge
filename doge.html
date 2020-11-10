@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bomber Doge: Derived from Tau Prolog "Example: My little doge"</title>
+		<meta charset="utf-8">
+		<link href="doge.css" rel="stylesheet">
+		<script type="text/javascript" src="modules/core.js"></script>
+		<script type="text/javascript" src="modules/dom.js"></script>
+		<script type="text/javascript" src="modules/lists.js"></script>
+		<script type="text/javascript" src="modules/random.js"></script>		
+	</head>
+	<body>
+		<div id="board">
+			<div id="doge"></div>
+			<div id="bone"></div>
+			<div id="controls">
+				<div class="control" id="control-w">w</div>
+				<div class="control" id="control-a">a</div>
+				<div class="control" id="control-s">s</div>
+				<div class="control" id="control-d">d</div>
+				<div class="control" id="control-p">p (poop)</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			fetch('main.pl').then( response => response.text())
+			.then((data) => {
+				// Create session
+				var session = pl.create(1000);
+				// Consult program
+				session.consult(data, {
+					success: function() {
+						// Query goal
+						session.query("init.", {
+							success: function() {
+								// Find answers
+								session.answer();
+							}
+						});
+					}
+				});
+			})
+		</script>
+
+	</body>
+</html>
