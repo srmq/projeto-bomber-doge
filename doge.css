@@ -27,6 +27,35 @@
 	z-index: 80;
 }
 
+.explosion {
+	background: transparent url("res/explosion.gif") center center no-repeat;
+	position: relative;
+	width: 86px;
+	height: 86px;
+	margin-bottom: -20px;
+	z-index: 100;
+}
+
+
+#bone {
+	background: transparent url("res/bone.gif") center center no-repeat;
+	position: relative;
+	display: none;
+	width: 40px;
+	height: 18px;
+	margin-bottom: -20px;
+	z-index: 75;
+}
+
+.wall {
+	background: transparent url("res/brick.gif") center center no-repeat;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin-bottom: -20px;
+	z-index: 30;
+}
+
 #controls {
 	position: relative;
 	top: 30px;
