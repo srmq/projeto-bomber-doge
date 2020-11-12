@@ -33,3 +33,18 @@ porta, passe como parâmetro o número após o http.server)
 * Abra seu navegador no site http://localhost:8000/doge.html 
 
 Pronto, o jogo já está rodando, divirta-se!
+
+# Fase 0 do projeto
+
+Esta fase, ao contrário das demais, deve ser feita de forma individual.
+O objetivo dela é você se familiarizar mais com prolog (e com sua
+encarnação Tau-Prolog), bem como com o código básico do jogo.
+
+Você deverá analisar o código prolog do esqueleto do jogo fornecido,
+no arquivo `main.pl`, recorrendo à documentação do Tau-Prolog, sempre
+que necessário. Então responda ao questionário no classroom. Esta fase
+vale 1 ponto na nota do projeto. Você pode já discutir as questões
+com o seu grupo, mas as respostas são individuais, responda com
+suas palavras.
+
+A seguir, novas fases serão divulgadas. As novas fases serão em grupo.
