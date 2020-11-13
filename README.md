@@ -62,11 +62,45 @@ especiais são opcionais, e você pode conseguir até 1 ponto extra
 
 # Missões Básicas
 
+Observação: você sempre pode introduzir predicados auxiliares
+que serão chamados pelos predicados solicitados, quando
+achar necessário.
+
 * Os controles que ficam suspensos na tela atrapalham a visão do
   jogo. Modifique o arquivo main.pl para adicionar uma nova ação,
   que ocorre quando o jogador aperta a tecla 'c'. Ao apertar a
   tecla 'c' os controles devem sumir da tela se estiverem aparecendo.
   Se estiverem ocultos, ao apertar 'c' eles aparecem. Veja como 
-  será o resultado no vídeo a seguir.
+  será o resultado no vídeo a seguir (clique na imagem para ver o vídeo).
 
 [![Escondendo os controles](http://img.youtube.com/vi/OOhle5iMbWU/0.jpg)](https://www.youtube.com/watch?v=OOhle5iMbWU "Escondendo os controles")  
+
+* Veja que o predicado rnd_place_bone em main.pl, apesar do nome,
+  sempre coloca o osso na posição fixa (200, 760). Você deve manter
+  a posição horizontal fixa em 760, mas para a posição vertical faça
+  com que o predicado coloque o osso numa posição aleatória entre
+  20 e 380. Para tal, use algum predicado do módulo random do
+  Tau-Prolog (consulte a documentação). Se você remover
+  a linha 'set_seed(1)' do predicado init/0, cada vez que você
+  carregar o jogo o osso deve aparecer numa posição diferente.
+  Veja como será o resultado no vídeo a seguir (aperta-se F5 cada vez
+  para o navegador recarregar o jogo)
+
+  [![Osso com posição aleatória](http://img.youtube.com/vi/bcVmppalHoE/0.jpg)](https://www.youtube.com/watch?v=bcVmppalHoE "Osso com posição aleatória")  
+
+  * Note que o cachorro consegue andar por cima das paredes. Isso 
+    não deve ocorrer. Para tal, foi introduzido o predicado
+    doge_free/2 que recebe o ponto para o qual o cachorro
+    quer andar e deve ter sucesso apenas se esse ponto para onde ele
+    quer ir não topar em qualquer parede. O predicado move/3 já usa esse predicado.
+    No entanto, como você pode ver no main.pl o doge_free/2
+    não foi implementado e sempre tem sucesso. Implemente o doge_free/2,
+    será mais fácil utilizando predicados auxiliares. Uma dica é você
+    verificar se o quadrado do cachorro no ponto para onde ele vai
+    intersecta com algum quadrado de parede. Recomendo [este link](https://www.hackerearth.com/practice/notes/how-to-check-if-two-rectangles-intersect-or-not/)
+    para lembrar as regras para verificar se dois retângulos
+    se intersectam. (Lembre-se de que você deve implementar tudo em prolog, no arquivo main.pl). 
+    Veja como será o resultado esperado no vídeo a seguir (note que o cachorro tenta passar por cima
+    da parede, mas não consegue)
+
+  [![Detecção de colisão](http://img.youtube.com/vi/zmk5BxhiH_s/0.jpg)](https://www.youtube.com/watch?v=zmk5BxhiH_s "Detecção de colisão")
