@@ -48,3 +48,25 @@ com o seu grupo, mas as respostas são individuais, responda com
 suas palavras.
 
 A seguir, novas fases serão divulgadas. As novas fases serão em grupo.
+
+# Projeto em grupo
+
+Agora que vocês já estão familiarizados com a estrutura básica do código,
+vocês estão aptos a aprimorá-lo, a fim de torná-lo um jogo mais
+divertido! Tudo isso praticando Prolog!
+
+Serão propostas algumas missões para vocês realizarem, as missões
+básicas contam na pontuação do projeto. Já as missões finais
+especiais são opcionais, e você pode conseguir até 1 ponto extra
+(na nota final da disciplina) se realizá-las com sucesso!
+
+# Missões Básicas
+
+* Os controles que ficam suspensos na tela atrapalham a visão do
+  jogo. Modifique o arquivo main.pl para adicionar uma nova ação,
+  que ocorre quando o jogador aperta a tecla 'c'. Ao apertar a
+  tecla 'c' os controles devem sumir da tela se estiverem aparecendo.
+  Se estiverem ocultos, ao apertar 'c' eles aparecem. Veja como 
+  será o resultado no vídeo a seguir.
+
+[![Escondendo os controles](http://img.youtube.com/vi/OOhle5iMbWU/0.jpg)](https://www.youtube.com/watch?v=OOhle5iMbWU "Escondendo os controles")  
