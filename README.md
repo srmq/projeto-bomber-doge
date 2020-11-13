@@ -58,7 +58,7 @@ divertido! Tudo isso praticando Prolog!
 Serão propostas algumas missões para vocês realizarem, as missões
 básicas contam na pontuação do projeto. Já as missões finais
 especiais são opcionais, e você pode conseguir até 1 ponto extra
-(na nota final da disciplina) se realizá-las com sucesso!
+(na nota final da disciplina) ao realizar (algumas) com sucesso!
 
 # Missões Básicas
 
@@ -104,3 +104,39 @@ achar necessário.
     da parede, mas não consegue)
 
   [![Detecção de colisão](http://img.youtube.com/vi/zmk5BxhiH_s/0.jpg)](https://www.youtube.com/watch?v=zmk5BxhiH_s "Detecção de colisão")
+
+  * A intenção das paredes é montar um labirinto, do ponto inicial do cachorro até o osso. No entanto,
+    a versão do predicado get_walls/1 no esqueleto simplesmente retorna uma pequena lista fixa de paredes.
+    Modifique o predicado get_walls/1 de forma que ele construa uma lista de paredes mais interessante,
+    como as paredes que vemos nos labirintos para crianças. Não digite no código explicitamente a posição
+    das paredes, faça com que o get_walls/1 construa a lista de paredes quando for chamado, usando
+    alguma estratégia interessante. Você pode mudar a posição inicial do cachorro também, se achar interesssante.
+
+# Missões extras
+
+  * O nome do jogo é bomber doge porque a intenção é que quando o cachorro faz cocô, depois de um tempo 
+    o cocô explode, destruindo as paredes num raio ao redor do cocô, para que o cachorro possa passar.
+    Por isso que já existe uma classe explosion que coloca uma explosão no jogo. Por exemplo, se você colocar a linha 
+    `<div class="explosion"></div>` em algum lugar do DOM, você verá a explosão no jogo. Nessa missão, 
+    você deve implementar esse comportamento (em prolog). Ou seja, depois de um tempo que o cocô é colocado,
+    ele explode, destruindo as paredes num raio ao redor dele (você pode simplesmente sumir com as paredes ao redor
+    depois da explosão).
+
+  * Que tal adicionar pontuação ao jogo? Para incentivar o jogador a terminar logo, a cada movimento do cachorro
+    ele poderia perder pontos, e ao usar uma explosão perder ainda mais pontos. Quando ele alcançasse o osso, 
+    ganharia uma recompensa em pontos e o jogo terminaria.
+
+  * Que tal adicionar múltiplos estágios, onde cada vez o layout do labirinto é diferente (e gerado automaticamente pelo get_/_walls/1)?
+
+  * O céu é o limite! Implemente melhorias interessantes no jogo!
+
+# Entrega
+
+Você deve submeter o arquivo .pl modificado no classroom. No dia da apresentação você rodará o jogo numa apresentação
+do meet com o professor (o arquivo será submetido um dia antes). O professor fará perguntas a membros da equipe.
+Todo membro deve ser capaz de responder qualquer pergunta. Compartilhe o conhecimento dentro do seu grupo!
+
+Lembre-se: cada trabalho é um produto original do grupo. Em caso de entregas idênticas, todas as cópias envolvidas
+receberão nota zero. Não coloque o seu código em um repositório público, ele poderá ser copiado. Mesmo depois
+da apresentação, não disponibilize o seu código, o professor poderá aproveitar o projeto em outros semestres
+e as pessoas poderiam deixar de aprender por conta própria copiando o seu projeto (e ainda receberiam zero!).
